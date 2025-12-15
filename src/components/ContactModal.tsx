@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -30,17 +31,27 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://backend.youware.com/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ...formData, subject: 'Contact Form Inquiry' }),
-      });
+      const serviceId = 'service_20dn4b7';
+      const templateId = 'template_x09plef';
+      // Use provided key as fallback
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'QCrfo0KZp21-Hay9C';
 
-      if (!response.ok) {
-        throw new Error('Failed to send message');
+      if (!publicKey) {
+        console.error('EmailJS Public Key is missing!');
+        throw new Error('Configuration Error: Missing Public Key');
       }
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: 'Contact Form Inquiry'
+        },
+        publicKey
+      );
 
       setStatus('success');
       setTimeout(() => {
@@ -50,6 +61,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         navigate('/thank-you');
       }, 1000);
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -156,6 +168,11 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     'Send Message'
                   )}
                 </button>
+                {status === 'error' && (
+                  <p className="text-red-500 text-center font-mono text-xs mt-4">
+                    Something went wrong. Please try again later.
+                  </p>
+                )}
               </form>
             )}
           </motion.div>

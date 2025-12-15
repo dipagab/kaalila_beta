@@ -47,3 +47,5 @@ This is a React-based web application using Vite for build tooling and Tailwind 
 - `ContactModal`: Fixed form submission by adding a default `subject` field to the API payload, as required by the backend. Added `id="contact-form"` for analytics tracking.
 - `Newsletter`: Added `id="newsletter-form"` for analytics tracking.
 - `ThankYou`: Created a new Thank You page (`/thank-you`) and updated `ContactModal` to redirect there after successful submission.
+- `Configuration`: Updated `ContactModal` and `Newsletter` to use `VITE_BACKEND_URL` environment variable for API calls, falling back to `https://backend.youware.com` (which requires configuration). Added error message display in `ContactModal`.
+- `EmailJS`: Configured `ContactModal` to use EmailJS (`@emailjs/browser`). Uses provided credentials (Service ID: `service_20dn4b7`, Template ID: `template_x09plef`, Public Key: `QCrfo0KZp21-Hay9C`). Can be overridden with `VITE_EMAILJS_PUBLIC_KEY`.

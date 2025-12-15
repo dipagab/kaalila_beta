@@ -11,7 +11,8 @@ const Newsletter = () => {
 
     setStatus('loading');
     try {
-      const response = await fetch('https://backend.youware.com/api/subscribe', {
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://backend.youware.com';
+      const response = await fetch(`${backendUrl}/api/subscribe`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
