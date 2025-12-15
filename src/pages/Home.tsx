@@ -94,8 +94,26 @@ const Hero = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="font-mono text-sm md:text-3xl lg:text-4xl bg-black text-white inline-block px-4 py-2 self-start transform -rotate-1 whitespace-nowrap"
-        >4 DAYS TO EXPLORE YOUR INNER CREATIVITY</motion.p>
+          className="font-mono text-xs md:text-3xl lg:text-4xl bg-black text-white inline-block px-4 py-2 self-start transform -rotate-1 whitespace-nowrap"
+          style={{
+            opacity: "1",
+            transform: "none"
+          }}>4 DAYS TO EXPLORE YOUR INNER CREATIVITY</motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="mt-12 self-end"
+        >
+          <a 
+            href="#dates"
+            className="inline-flex items-center gap-2 border border-black text-black bg-transparent px-8 py-4 rounded-full font-mono text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-300 group"
+          >
+            Reserve Your Spot
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+        </motion.div>
       </div>
       <div className="absolute inset-0 w-full h-full z-0 opacity-20 overflow-hidden">
         <motion.div 

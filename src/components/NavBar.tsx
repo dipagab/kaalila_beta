@@ -117,7 +117,7 @@ const NavBar = () => {
                   href="#dates" 
                   className="font-mono text-sm uppercase tracking-widest border border-black rounded-full px-8 py-3 hover:bg-black hover:text-white transition-all duration-300"
                 >
-                  Book Now
+                  Reserve Your Spot
                 </a>
               )}
             </div>
@@ -187,7 +187,7 @@ const NavBar = () => {
                     className="inline-block font-mono text-sm uppercase tracking-widest border border-white rounded-full px-8 py-3 hover:bg-white hover:text-black transition-all duration-300"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Book Now
+                    Reserve Your Spot
                   </a>
                 </motion.div>
               )}

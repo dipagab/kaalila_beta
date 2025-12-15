@@ -26,7 +26,7 @@ const CTASection = () => {
             </div>
 
             <div className="max-w-2xl mx-auto text-center space-y-8">
-              <h3 className="text-3xl md:text-4xl font-serif italic">How To Book</h3>
+              <h3 className="text-3xl md:text-4xl font-serif italic">Reserve Your Spot</h3>
               <p className="font-mono text-sm md:text-base leading-relaxed opacity-80">
                 Limited to 12 people. 4 spots remaining.<br/>
                 This retreat isn't for everyone—and that's okay.<br/>

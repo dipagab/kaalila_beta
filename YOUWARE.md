@@ -49,3 +49,7 @@ This is a React-based web application using Vite for build tooling and Tailwind 
 - `ThankYou`: Created a new Thank You page (`/thank-you`) and updated `ContactModal` to redirect there after successful submission.
 - `Configuration`: Updated `ContactModal` and `Newsletter` to use `VITE_BACKEND_URL` environment variable for API calls, falling back to `https://backend.youware.com` (which requires configuration). Added error message display in `ContactModal`.
 - `EmailJS`: Configured `ContactModal` to use EmailJS (`@emailjs/browser`). Uses provided credentials (Service ID: `service_20dn4b7`, Template ID: `template_x09plef`, Public Key: `QCrfo0KZp21-Hay9C`). Can be overridden with `VITE_EMAILJS_PUBLIC_KEY`.
+- `Home`: Repositioned "Reserve Your Spot" CTA in Hero section to the right side (`self-end`) to align with the end of the payoff text "CREATIVITY".
+- `NavBar`: Changed "Book Now" text to "Reserve Your Spot".
+- `CTASection`: Changed "How To Book" title to "Reserve Your Spot".
+- `Home`: Fixed hero payoff text responsiveness by removing inline font size. Reduced mobile font size to 12px (text-xs).
