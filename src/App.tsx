@@ -10,6 +10,7 @@ import BlogPost from './pages/blog/post';
 import RetreatsList from './pages/retreats/list';
 import RetreatDetail from './pages/retreats/detail';
 import ThankYou from './pages/ThankYou';
+import ArtAsLanguage from './pages/ArtAsLanguage';
 import NavBar from './components/NavBar';
 import Newsletter from './components/Newsletter';
 
@@ -80,6 +81,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/retreats" element={<RetreatsList />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/art-as-language" element={<ArtAsLanguage />} />
             <Route path="/retreats/:slug" element={<RetreatDetail />} />
           </Routes>
         </main>

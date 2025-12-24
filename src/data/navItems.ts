@@ -7,6 +7,7 @@ export interface NavItem {
 export const staticNavItems: NavItem[] = [
   { name: 'Home', href: '/' },
   { name: 'Journeys', href: '/retreats' },
+  { name: 'Workshop', href: '/art-as-language' },
   { name: 'Journal', href: '/blog' },
   { name: 'Contact', href: '#footer' }
 ];

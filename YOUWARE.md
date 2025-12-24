@@ -27,6 +27,8 @@ This is a React-based web application using Vite for build tooling and Tailwind 
 - `contacts`: Stores contact form submissions (id, name, email, subject, message, created_at)
 
 # Recent Changes
+- `WorkshopCTA`: Added detailed event timing (Dec 28, 2025, 9am-12pm) and address (VinHomes Central Park) to the reservation section. Explicitly stated that reservation is required.
+- `ArtAsLanguage`: Updated hero image to `src/assets/art-workshop-hero.png` (user uploaded), maintaining the white evanescence effect. Removed "[ section ]" labels from section titles. Updated FAQ to remove mention of Vietnamese support.
 - `Blog`: Fixed an issue where updating one blog post image affected others. Decoupled image references in `src/data/posts.ts`. Updated the third blog post image to `https://public.youware.com/image/3bcb051d-cefe-47e9-9809-72aa0a42f9d1/e0tuqdb76i.jpeg` while preserving the original image for others.
 - `WhoWeAre`: Organizer bios with refined mission statement ("Not Gurus. Just Humans."). Uses `src/assets/team-authentic.jpg` for a more natural, authentic look. Layout updated to a single central column (Title -> Image -> Text). **Updated**: Text alignment improved (centered, split paragraphs, relaxed leading) for better readability. **Team Members**: Added Gabriele (Art Director), Hanh (Facilitator), and Sarah (Cooking) with photos and descriptions.
     - **Title**: Restored to "The Collective" using the `GraphicTitle` component (brackets style) for consistency with other sections.
@@ -53,3 +55,8 @@ This is a React-based web application using Vite for build tooling and Tailwind 
 - `NavBar`: Changed "Book Now" text to "Reserve Your Spot".
 - `CTASection`: Changed "How To Book" title to "Reserve Your Spot".
 - `Home`: Fixed hero payoff text responsiveness by removing inline font size. Reduced mobile font size to 12px (text-xs).
+- `Configuration`: Updated Google Analytics measurement ID to G-7M7MS36H56.
+- `Pages`: Added "Art as an Expressive Language" workshop landing page at `/art-as-language`.
+- `Navigation`: Added "Workshop" link to the main navigation pointing to `/art-as-language`.
+- `Pages`: Updated "Art as an Expressive Language" page structure (simplified) and CTA section (matched visual style with Home page).
+- `Pages`: Updated "Art as an Expressive Language" hero section to match Vietnam retreat style and added FAQ section.
